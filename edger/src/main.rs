@@ -1,5 +1,5 @@
-Struct Cli {
-    pattern: String;
+struct Cli {
+    pattern: String,
     path: std::path::PathBuf, 
 }
 fn main() {
@@ -7,7 +7,8 @@ fn main() {
     let path = std::env::args().nth(2).expect("Can't find your file man");
 
     let args = Cli{
-        
-    }
-    println!("Okay your pattern is {} and your path is {}",pattern, path)
+        pattern,
+        path: std::path::PathBuf::from(path),
+    };
+    println!("Okay your pattern is {} and your path is {:?}",args.pattern, args.path)
 }
