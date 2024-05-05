@@ -1,0 +1,11 @@
+# Compiled files and build directory
+/target/
+
+# Remove Cargo.lock from the repository for library projects
+# Uncomment the following line if applicable
+# Cargo.lock
+
+# Editor and IDE specific files
+**/*.rs.bk
+.idea/
+.vscode/
