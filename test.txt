@@ -1,0 +1,83 @@
+As computers changed the world with their unprecedented power, a
+new science flourished: computer science. It showed how computers
+could be used to solve problems. It allowed us to push machines to
+their full potential. And we achieved crazy, amazing things.
+Computer science is everywhere, but it’s still taught as boring
+theory. Many coders never even study it! However, computer sci￾ence is crucial to effective programming. Some friends of mine sim￾ply can’t find a good coder to hire. Computing power is abundant,
+but people who can use it are scarce.
+This is my humble attempt to help the world, by pushing you
+to use computers efficiently. This book presents computer science
+concepts in their plain distilled forms. I will keep academic formal￾ities to a minimum. Hopefully, computer science will stick to your
+mind and improve your code.
+
+If you want to smash problems with efficient solutions, this book
+is for you. Little programming experience is required. If you al￾ready wrote a few lines of code and recognize basic programming
+statements like for and while, you’ll be OK. If not, online pro￾gramming courses1
+cover more than what’s required. You can do
+one in a week, for free. For those who studied computer science,
+this book is an excellent recap for consolidating your knowledge.
+B65 i4n’5 com165e3 4cience j645 fo3 academic4?
+This book is for everyone. It’s about computational thinking. You’ll
+learn to change problems into computable systems. You’ll use com￾putational thinking on everyday problems. Prefetching and caching
+will streamline your packing. Parallelism will speed up your cook￾ing. Plus, your code will be awesome.
+May the force be with you,
+Wlad
+
+Basics
+Computer science is not about machines, in
+the same way that astronomy is not about
+telescopes. There is an essential unity of
+mathematics and computer science.
+—EDSGER DIJKSTRA
+C
+OMPUTERS NEED US to break down problems into chunks
+they can crunch. To do this, we need some math. Don’t
+panic, it’s not rocket science—writing good code rarely
+calls for complicated equations. This chapter is just a toolbox for
+problem solving. You’ll learn to:
+Model ideas into flowcharts and pseudocode,
+ Know right from wrong with logic,
+Count stuff,
+Calculate probabilities safely.
+With this, you will have what it takes to translate your ideas into
+computable solutions.
+ǔ.ǔ Idea4
+When you’re on a complex task, keep your brain at the top of
+its game: dump all important stuff on paper. Our brains’ work￾ing memory easily overflows with facts and ideas. Writing every￾thing down is part of many organizing methods. There are several
+ways to do it. We’ll first see how flowcharts are used to represent
+processes. We’ll then learn how programmable processes can be
+drafted in pseudocode. We’ll also try and model a simple problem
+with math.
+
+When Wikipedians discussed their collaboration process, they cre￾ated a flowchart that was updated as the debate progressed. Having
+a picture of what was being proposed helped the discussion:
+Previous page state
+Edit the page
+Was your edition 
+modified by others?
+Do you agree with
+the other person?
+Discuss the
+issue with the 
+other person
+New page state
+No
+No
+Yes
+Yes
+No Do you accept that 
+modification?
+Yes
+Wiki edition process șadapted from httpǽ//wikipedia.orgȚ.
+Like the editing process above, computer code is essentially a pro￾cess. Programmers often use flowcharts for writing down comput￾ing processes. When doing so, you should follow these guidelines1
+for others to understand your flowcharts:
+• Write states and instruction steps inside rectangles.
+• Write decision steps, where the process may go different
+ways, inside diamonds.
+• Never mix an instruction step with a decision step.
+• Connect sequential steps with arrows.
+• Mark the start and end of the process.
+1
+There’s even an ISO standard specifying precisely how software systems di￾agrams should be drawn, called UML: http://code.energy/UML.
+Basics
+Let’s see how this works for finding the biggest of three numbers:

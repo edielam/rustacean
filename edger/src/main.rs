@@ -11,6 +11,11 @@ fn main() {
     // let path = std::env::args().nth(2).expect("Can't find your file man");
 
     let args = Cli::parse();
+    let content = std::fs::read_to_string(&args.path).expect("Yo what's in this file");
     
-    println!("Okay your pattern is {:?} and your path is {:?}",args.pattern, args.path)
+    for line in content.lines(){
+        if line.contains(&args.pattern){
+            println!("{}", line);
+        }
+    }
 }
