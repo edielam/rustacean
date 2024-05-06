@@ -1,4 +1,4 @@
-use std::fs::File;
+use std::{fs::File, io::BufRead};
 
 use clap::Parser;
 
@@ -14,10 +14,12 @@ fn main() {
 
     let args = Cli::parse();
     //let content = std::fs::read_to_string(&args.path).expect("Yo what's in this file");
-    let f = File::open(&args.path);
-    let content = std::io::BufReader::new(f);
+    let f = File::open(&args.path).expect("Yo what's in this file");
+    let content = std::io::BufReader::with_capacity(10,f);
     
-    for line in content.lines(){
+    
+    for line_result in content.lines(){
+        let line = line_result.expect("lines");
         if line.contains(&args.pattern){
             println!("{}", line);
         }
