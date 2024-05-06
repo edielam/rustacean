@@ -1,3 +1,5 @@
+use std::fs::File;
+
 use clap::Parser;
 
 ///Search for pattern in a file and display the lines that contain it. More like grep
@@ -11,7 +13,9 @@ fn main() {
     // let path = std::env::args().nth(2).expect("Can't find your file man");
 
     let args = Cli::parse();
-    let content = std::fs::read_to_string(&args.path).expect("Yo what's in this file");
+    //let content = std::fs::read_to_string(&args.path).expect("Yo what's in this file");
+    let f = File::open(&args.path);
+    let content = std::io::BufReader::new(f);
     
     for line in content.lines(){
         if line.contains(&args.pattern){
