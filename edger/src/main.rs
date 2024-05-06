@@ -15,7 +15,7 @@ fn main() {
     let args = Cli::parse();
     //let content = std::fs::read_to_string(&args.path).expect("Yo what's in this file");
     let f = File::open(&args.path).expect("Yo what's in this file");
-    let content = std::io::BufReader::new(f);
+    let content = std::io::BufReader::with_capacity(1024,f);
     
     
     for line_result in content.lines(){
