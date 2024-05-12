@@ -1,0 +1,16 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.release]
+release = false
+
+[dependencies]
+tokio = { version = "1.37.0", features = ["full"] }
+async-trait = "0.1"
+futures = { version = "0.3.30", features = ["executor", "thread-pool"] }
+libp2p = { version = "0.53.2", features = [ "tokio", "gossipsub", "mdns", "noise", "macros", "tcp", "yamux", "quic"]}
+async-std = "1.10"
+tracing = { version = "0.1.4" }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
