@@ -32,8 +32,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
     };
 
     // Define the ngrok bootstrap node's address and peer ID
-    let bootstrap_peer_id: PeerId = "12D3KooWQmB5Ftfk3XS8PCEAsedFXGoa3rqnBMCC9P3xHSeqWqqG".parse()?;
-    let bootstrap_addr: Multiaddr = "/dns4/0.tcp.ngrok.io/tcp/13095".parse()?;
+    let bootstrap_peer_id: PeerId = "12D3KooWSoDj2zCvtQc2Rp452KKzZKoiuJPrTTzLQXb6menXQiR6".parse()?;
+    let bootstrap_addr: Multiaddr = "/dns4/0.tcp.ngrok.io/tcp/18810".parse()?;
 
     // Add the bootstrap node as a known peer
     swarm.behaviour_mut().add_explicit_peer(&bootstrap_peer_id);
