@@ -1,0 +1,11 @@
+[package]
+name = "ping_network"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libp2p = { version = "0.48", features = ["tcp-tokio", "dns-tokio", "gossipsub", "identify", "mplex"] }
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+async-std = "1.10.0"
+tokio-stream = "0.1"
