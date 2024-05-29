@@ -32,7 +32,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     };
 
     // Add a listening address
-    let listen_addr: Multiaddr = "/ip4/0.0.0.0/tcp/0".parse()?;
+    let listen_addr: Multiaddr = "/ip4/10.66.66.2/tcp/63292".parse()?;
     Swarm::listen_on(&mut swarm, listen_addr)?;
 
     // Await for the listeners to be set up
