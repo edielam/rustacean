@@ -9,3 +9,6 @@
 **/*.rs.bk
 .idea/
 .vscode/
+edger/.DS_Store
+ssh-key-2024-05-29.key
+ssh-key-2024-05-29.key.pub
